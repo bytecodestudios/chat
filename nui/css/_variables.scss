@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap');
+
+$font-primary: 'Cairo', sans-serif;
+$font-secondary: "Quicksand";
+$border-primary: rgba(77, 75, 89, 0.4);
+$border-secondary: rgba(77, 75, 89, 0.8);
+$bg-glass: rgba(28, 31, 40, 1);
+$bg-primary: rgba(2, 6, 16, 1);
+$bg-secondary: rgba(28, 31, 40, 1);
+$bg-tertiary: rgba(255, 255, 255, 0.1);
+$text-primary: #f4f4f4;
+$text-secondary: #b3b3b3;
+$brand-blue: #3b82f6;
+$brand-red: #ef4444;
+$brand-yellow: #eab308;
+$brand-green: #22c55e;
+$brand-purple: #BE6DB7;
+$gradient-blue: radial-gradient(circle, #3b82f6, #347af4, #2e73f1, #296bee, #2563eb);
+$gradient-red: radial-gradient(circle, #ef4444, #ea3d3d, #e63635, #e12e2e, #dc2626);
+$gradient-yellow: radial-gradient(circle, #eab308, #e2a806, #da9e05, #d29404, #ca8a04);
+$gradient-green: radial-gradient(circle, #22c55e, #1fbc59, #1cb454, #19ab4f, #16a34a);
+
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin image($width, $height, $fit) {
+    min-width: $width;
+    min-height: $height;
+    max-width: $width;
+    max-height: $height;
+    object-fit: $fit;
+}
+
+@mixin text($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin button($width, $height, $bg, $color, $bwidth, $bcolor) {
+    width: $width;
+    height: $height;
+    background: $bg;
+    color: $color;
+    border: $bwidth solid $bcolor;
+}
+
+@mixin app($bg, $color) {
+    height: 100%;
+    width: 100%;
+    background: $bg;
+    color: $color;
+    overflow: hidden;
+}
+
+@mixin text-clip() {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
