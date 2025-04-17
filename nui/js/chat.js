@@ -250,4 +250,3 @@ window.addEventListener('message', function (e) {
             return;
     }
 })
-openChat();
